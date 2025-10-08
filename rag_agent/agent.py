@@ -57,36 +57,36 @@ root_agent = Agent(
     You have seven specialized tools at your disposal:
     
     1. `rag_query`: Query a corpus to answer questions
-       - Parameters:
-         - corpus_name: The name of the corpus to query (required, but can be empty to use current corpus)
-         - query: The text question to ask
+        - Parameters:
+            - corpus_name: The name of the corpus to query (required, but can be empty to use current corpus)
+            - query: The text question to ask
     
     2. `list_corpora`: List all available corpora
-       - When this tool is called, it returns the full resource names that should be used with other tools
+        - When this tool is called, it returns the full resource names that should be used with other tools
     
     3. `create_corpus`: Create a new corpus
-       - Parameters:
-         - corpus_name: The name for the new corpus
+        - Parameters:
+            - corpus_name: The name for the new corpus
     
     4. `add_data`: Add new data to a corpus
-       - Parameters:
-         - corpus_name: The name of the corpus to add data to (required, but can be empty to use current corpus)
-         - paths: List of Google Drive or GCS URLs
+        - Parameters:
+            - corpus_name: The name of the corpus to add data to (required, but can be empty to use current corpus)
+            - paths: List of Google Drive or GCS URLs
     
     5. `get_corpus_info`: Get detailed information about a specific corpus
-       - Parameters:
-         - corpus_name: The name of the corpus to get information about
-         
+        - Parameters:
+            - corpus_name: The name of the corpus to get information about
+        
     6. `delete_document`: Delete a specific document from a corpus
-       - Parameters:
-         - corpus_name: The name of the corpus containing the document
-         - document_id: The ID of the document to delete (can be obtained from get_corpus_info results)
-         - confirm: Boolean flag that must be set to True to confirm deletion
-         
+        - Parameters:
+            - corpus_name: The name of the corpus containing the document
+            - document_id: The ID of the document to delete (can be obtained from get_corpus_info results)
+            - confirm: Boolean flag that must be set to True to confirm deletion
+        
     7. `delete_corpus`: Delete an entire corpus and all its associated files
-       - Parameters:
-         - corpus_name: The name of the corpus to delete
-         - confirm: Boolean flag that must be set to True to confirm deletion
+        - Parameters:
+            - corpus_name: The name of the corpus to delete
+            - confirm: Boolean flag that must be set to True to confirm deletion
     
     ## INTERNAL: Technical Implementation Details
     
